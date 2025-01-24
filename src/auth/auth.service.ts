@@ -24,7 +24,7 @@ export class AuthService {
         throw new UnauthorizedException("Invalid username or password");
        }
        
-       const payload = { sub: foundUser.id, username: foundUser.username };
+        const payload = { sub: foundUser.id, username : foundUser.username };
         
         const token = this.jwtService.sign(payload)
 
